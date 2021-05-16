@@ -22,4 +22,3 @@ def citizen(request, citizen_id):
     })
 
 
-

@@ -15,7 +15,7 @@
                 <h6 class="card-subtitle mb-2 text-muted">Sử dụng tên đăng nhập và mật khẩu được cung cấp.</h6>
                 <form action="{% url 'users:login' %}" method="POST">
                     {% if message %}
-                        <div class="alert alert-danger" role="alert">{{message}}</div>
+                        <div class="alert alert-warning" role="alert">{{message}}</div>
                     {% endif %}
 
                     {% csrf_token %}
@@ -28,7 +28,8 @@
                         <label for="password" class="form-label">Mật khẩu</label>
                         <input type="password" name="password" class="form-control" id="password" placeholder="Password">
                     </div>
-                    <input type="submit" value="Login" class="btn btn-primary">
+                    <input type="submit" value="Login" class="btn btn-primary" style="width: 250px;">
+                    <a href="{% url 'admin:index' %}" class="btn btn btn-warning my-2 mx-auto" style="width: 250px;" role="button">Truy cập trang quản trị</a>
                 </form>
                 <h8 class="card-subtitle mb-2 text-muted">Website này được phát triển vào tháng 05 năm 2021.</h8>
             </div>

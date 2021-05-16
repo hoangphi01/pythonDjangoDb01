@@ -7,6 +7,5 @@ urlpatterns = [
     path("", views.index, name="index", ),
     path("<int:citizen_id>", views.citizen, name="citizen"),
     
-
 ]
     

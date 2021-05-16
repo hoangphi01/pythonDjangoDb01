@@ -2,15 +2,18 @@
 
 {% block body %}
 <div
-    style="position: relative; background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0,0,0,0.3)), color-stop(100%,rgba(0,0,0,0.62))), url(https://i.ibb.co/Pwx24qQ/loginpage.png); background-size: cover; background-position: top;"
+    style="position: relative; background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0,0,0,0.3)), color-stop(100%,rgba(0,0,0,0.32))), url(https://i.ibb.co/Vj2rgxB/index.png); background-size: cover; background-position: top;"
     class="h-100 d-flex justify-content-center"
     >
     <!-- <div class="px-5 h-100"> -->
         <!-- <div style="position: relative;" class="h-100"> -->
-            <div class="card align-middle" style="width: fit-content; position: absolute; top: 50%; transform: translateY(-50%);">
+            <div class="card align-middle" style="width: 1250px; position: absolute; top: 50%; transform: translateY(-50%);">
                 <div class="alert alert-info" role="alert">
                     <h4 class="card-title"><b>Thông tin chi tiết</b></h4>
                     <h6 class="card-subtitle mb-2 text-muted">Tài khoản đang truy cập: {{request.user.username}}</h6>
+                    <a href="{% url 'citizens:index' %}" class="btn btn-dark btn-sm my-1 mx-auto" style="width: 395px;" role="button">Quay về</a>
+                    <button class="btn btn-success hidden-print btn-sm mx-auto my-2" onclick="window.print()" style="width: 415px;" ><span class="glyphicon glyphicon-print" aria-hidden="true"></span>In thông tin</button>
+                    <a href="mailto:support@email.com" target="_blank" class="btn btn-sm btn-secondary my-1 mx-auto" style="width: 395px;">Gửi thông tin qua email</a>
                 </div>
                 <div class="card-group">
                     <div class="card">
@@ -49,12 +52,10 @@
                       </div>
                     </div>
                   </div>
-                  <a href="{% url 'citizens:index' %}" class="btn btn-outline-dark my-2 mx-auto" style="width: 130px;" role="button">Quay về</a>
             </div>
         </div>
     </div>
-
-  </div>  
+</div>  
 
 {% endblock %}
 

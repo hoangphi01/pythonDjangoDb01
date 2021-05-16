@@ -14,9 +14,11 @@
                     <h5 class="card-subtitle mb-2 text-muted">Chào mừng, {{request.user.username}}</h5>
                     <p class="card-text">Username của bạn là: "{{request.user.username}}", bạn có thể <br/>sử dụng "{{request.user.username}}" để truy cập cơ sở dữ liệu.</p>
                     <p class="card-text">Sử dụng nút "Đăng xuất" để đăng xuất khỏi <br/>tài khoản này.</p>
-                    <a href="{% url 'citizens:index' %}" class="btn btn-outline-success btn-lg px+3" role="button">Truy cập Cơ sở dữ liệu</a>
-                    <a href="{% url 'users:logout' %}" class="btn btn-outline-danger btn-lg my-1 px+2" role="button">Đăng xuất</a>
+                    <p class="card-text">Sử dụng nút "Truy cập trang quản trị" để chỉnh sửa<br/> cơ sở dữ liệu. <b>(Yêu cầu tài khoản admin)</b></p>
+                    <a href="{% url 'citizens:index' %}" class="btn btn-outline-success " role="button">Truy cập Cơ sở dữ liệu</a>
+                    <a href="{% url 'users:logout' %}" class="btn btn-outline-danger" style="width: 177px;" role="button">Đăng xuất</a>
                 </div>
+                <a href="{% url 'admin:index' %}" class="btn btn-outline-dark my-3 mx-auto" style="width: 370px;" role="button">Truy cập trang quản trị</a>
             </div>
         </div>
     </div>
